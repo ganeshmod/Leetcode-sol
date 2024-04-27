@@ -11,9 +11,7 @@ class Solution {
     
     for (int i = index; i < candidates.length; i++) {
         // Check if the current candidate exceeds the remaining target
-        if (candidates[i] > target) {
-            break; // Stop loop if further candidates are too large
-        }
+       
         
         // Skip duplicates to avoid redundant combinations
         if (i > index && candidates[i] == candidates[i - 1]) {
