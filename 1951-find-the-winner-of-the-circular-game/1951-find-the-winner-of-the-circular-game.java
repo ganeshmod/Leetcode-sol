@@ -14,11 +14,13 @@ class Solution {
             if (count == k) {
                 list.remove(i);
                 count = 0;
-                // Adjust index only if the current index is not at the end of the list
+               
                 if (i == list.size()) {
                     i = 0;
                 }
-            } else {
+            }
+
+             else {
                 i = (i + 1) % list.size();
             }
         }
