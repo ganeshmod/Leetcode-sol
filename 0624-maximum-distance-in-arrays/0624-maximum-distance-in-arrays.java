@@ -1,19 +1,20 @@
 class Solution {
     public int maxDistance(List<List<Integer>> arrays) {
-        int maxi=Integer.MIN_VALUE;
-       int i=0;
-       while(i<arrays.size()-1){
-        List<Integer>ans= arrays.get(i);
-        int j=i+1;
-        while(j<arrays.size()){
-         List<Integer>ans2=arrays.get(j);
-       maxi=Math.max(maxi,Math.abs(ans.get(0)-ans2.get(ans2.size()-1)));
-       j++;
+        int result=0;
+        List<Integer>ans1=arrays.get(0);
+        int MIN=ans1.get(0);
+        int MAX=ans1.get(ans1.size()-1);
+        for(int i=1;i<arrays.size();i++){
+            List<Integer>ans2=arrays.get(i);
+            int currmin=ans2.get(0);
+            int currmax=ans2.get(ans2.size()-1);
+            result = Math.max(result, Math.abs(MIN - currmax));
+            result = Math.max(result, Math.abs(currmin - MAX));
+
+            MAX=Math.max(MAX,currmax);
+            MIN=Math.min(MIN,currmin);
         }
-        i++;
-       }
-       
-        return maxi;
+return result;
        
     }
 }
