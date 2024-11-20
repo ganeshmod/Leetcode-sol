@@ -1,4 +1,5 @@
 # Write your MySQL query statement below
+# Write your MySQL query statement below
 
 select  distinct l1.num  as consecutiveNums from 
 Logs l1,Logs l2, Logs l3
