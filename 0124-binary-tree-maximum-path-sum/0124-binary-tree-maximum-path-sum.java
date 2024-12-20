@@ -14,9 +14,10 @@
  * }
  */
 class Solution {
-    static int maxi=Integer.MIN_VALUE;
+   static int maxi;
     public int maxPathSum(TreeNode root) {
         // Use array to pass by reference
+        maxi=Integer.MIN_VALUE;
         
         check(root);
         return maxi;
