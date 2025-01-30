@@ -16,14 +16,15 @@ class Solution {
             }
             else{
 
-
-                  if(ten>=1 && five>=1){
+                      if (ten>=1 && five>=1){
                     five--;
                     ten--;
                 }
-                else  if(five>=3){
+                 
+                   else if(five>=3){
                     five-=3;
                 }
+                 
                
                 else{
                     return false;
